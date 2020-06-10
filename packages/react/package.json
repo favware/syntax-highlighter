@@ -1,0 +1,62 @@
+{
+	"name": "@favware/syntax-highlighter-react",
+	"version": "0.0.1",
+	"description": "React bindings for @skyra/syntax-highlighter-core",
+	"author": "@favware",
+	"license": "MIT",
+	"main": "dist/index.js",
+	"module": "dist/index.es.js",
+	"typings": "dist/index.d.ts",
+	"homepage": "https://github.com/favware/syntax-highlighter/tree/master/packages/react#readme",
+	"scripts": {
+		"build": "rollup -c rollup.config.ts"
+	},
+	"devDependencies": {
+		"@rollup/plugin-commonjs": "^13.0.0",
+		"@rollup/plugin-node-resolve": "^8.0.1",
+		"replace-in-files-cli": "^0.3.1",
+		"rollup": "^2.13.1",
+		"rollup-plugin-cleaner": "^1.0.0",
+		"rollup-plugin-peer-deps-external": "^2.2.2",
+		"rollup-plugin-terser": "^6.1.0",
+		"rollup-plugin-typescript2": "^0.27.1"
+	},
+	"peerDependencies": {
+		"@favare/syntax-highlighter-core": "latest",
+		"react": "^16.x",
+		"react-dom": "^16.x"
+	},
+	"directories": {
+		"lib": "src"
+	},
+	"files": [
+		"dist"
+	],
+	"engines": {
+		"node": ">=10"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/favware/syntax-highlighter.git"
+	},
+	"bugs": {
+		"url": "https://github.com/favware/syntax-highlighter/issues"
+	},
+	"keywords": [
+		"favware",
+		"typescript",
+		"ts",
+		"yarn",
+		"stenciljs",
+		"syntax",
+		"highlight",
+		"prism",
+		"primsjs",
+		"react",
+		"webcomponents",
+		"stencil"
+	]
+}

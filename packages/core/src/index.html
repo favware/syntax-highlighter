@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+		<title>Favware Syntax Highlighter</title>
+		<style>
+			body {
+				color: #eee;
+				background-color: #2c2f33;
+				font-family: 'Fira Code', 'Cascadia Code', 'Meslo NGF', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', 'Courier New',
+					Courier, monospace;
+			}
+
+			a {
+				color: #0099ff;
+			}
+
+			a:hover {
+				color: #037cce;
+			}
+
+			.logo {
+				display: inline-block;
+				font-weight: bold;
+				font-size: 2em;
+				margin: 0;
+			}
+
+			.title {
+				border-bottom: 1px solid #4a4a4a;
+				padding-bottom: 0.25em;
+			}
+		</style>
+		<script type="module" src="/build/favware-syntax-highlighter-core.esm.js"></script>
+		<script nomodule src="/build/favware-syntax-highlighter-core.js"></script>
+	</head>
+	<body>
+		<div>
+			<div>
+				<h1 class="logo">@favware/syntax-highlighter-core</h1>
+				<span>[<a target="_blank" rel="noopener noreferrer" href="https://github.com/favware/syntax-highlighter/">Github</a>]</span>
+			</div>
+			<main>
+				<div>
+					<h3 class="title">A simple ES6 import</h3>
+					<syntax-highlighter
+						theme="dark"
+						language="javascript"
+						content="import { SyntaxHighlighter } from @favware/syntax-highlighter-react"
+					/>
+				</div>
+
+				<div>
+					<h3 class="title">
+						Sample code from
+						<a target="__blank" rel="noreferrer" href="https://github.com/favware/graphql-pokemon">favware/graphql-pokemon</a>
+					</h3>
+					<syntax-highlighter
+						theme="dark"
+						language="typescript"
+						content="
+import { Query } from '@favware/graphql-pokemon';
+
+interface GraphQLPokemonResponse<K extends keyof Omit<Query, '__typename'>> {
+  data: Record<K, Omit<Query[K], '__typename'>>;
+}
+
+fetch('https://graphqlpokemon.favware.tech/', {
+	method: 'POST',
+	headers: {
+		'Content-Type': 'application/json'
+	},
+	body: JSON.stringify({
+		query: `
+		  {
+			getPokemonDetails(pokemon: dragonite skip: 0 take: 2 reverse: true) {
+				sprite
+				num
+				species
+				color
+			}
+		  }
+		`
+	})
+})
+	.then(res => res.json() as Promise<GraphQLPokemonResponse<'getPokemonDetails'>>)
+	.then(json => console.log(json.data));"
+					/>
+				</div>
+
+				<div>
+					<h3 class="title">
+						Sample code from
+						<a target="__blank" rel="noreferrer" href="https://doc.rust-lang.org/rust-by-example/hello.html"
+							>Rust - Hello World</a
+						>
+					</h3>
+					<syntax-highlighter
+						theme="dark"
+						language="rust"
+						content='
+// This is a comment, and is ignored by the compiler
+
+// This is the main function
+fn main() {
+    // Statements here are executed when the compiled binary is called
+
+    // Print text to the console
+    println!("Hello World!");
+}'
+					/>
+				</div>
+
+				<div>
+					<h3 class="title">
+						A very light Hello World for C#
+					</h3>
+					<p>Note: C# language string is <em>csharp</em>, not <em>c#</em>!</p>
+					<syntax-highlighter
+						theme="light"
+						language="csharp"
+						content='
+using System;
+
+namespace HelloWorld
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      Console.WriteLine("Hello World!");    
+    }
+  }
+}'
+					/>
+				</div>
+			</main>
+		</div>
+	</body>
+</html>

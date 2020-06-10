@@ -1,157 +1,67 @@
-# snippet-highlight
+<div align="center">
+<p>
+<h1> Syntax Highlighter </h1>
+<h3> A lightweight, easy-to-use and framework agnostic syntax highlighter for your code examples(snippets) in web applications </h3>
+</p>
+<p>
+	<a href="https://github.com/favware/syntax-highlighter/blob/master/LICENSE.md">
+	<img src="https://img.shields.io/github/license/favware/syntax-highlighter?logo=github&maxAge=3600&style=flat-square" alt="NPM version" />
+	</a>
+</p>
 
-## A lightweight, easy-to-use and framework agnostic syntax highlighter for your code examples(snippets) in web applications
+<a href="https://depfu.com/github/favware/syntax-highlighter?project_id=13651">
+<img src="https://badges.depfu.com/badges/4853d088999fc77ee0f8377b3fb52d9a/count.svg" alt="Depfu" />
+</a>
 
-# Why another code highlighter?
-> There are many syntax highlighters avaliable already but most of those are either complex to setup or front end framework specific. `snippet-highlight` is built using concepts of web components. You can use it everywhere, i.e. Angular, React, Vue, any framework, No Framework!
+<a href="https://donate.favware.tech/patreon">
+<img src="https://img.shields.io/badge/donate-patreon-F96854.svg?logo=patreon" alt="Patreon" />
+</a>
+</div>
 
-# Index
- * [Usage](#usage)
- * [Installation](#installation)
- * [Framework Integration](#framework-integration)
-    * [No Framework or Any Framework](#no-framework-or-any-framework)
-    * [Angular](#angular)
-    * [React](#react)
-    * [Vue](#vue)
- * [Properties](#properties)
- * [Supported Languages](#supported-languages)
- * [Demo](#demo)
+***Table of Contents***
+- [Why yet another code highlighter?](#why-yet-another-code-highlighter)
+- [Features](#features)
+  * [Properties](#properties)
+- [Screenshots](#screenshots)
+  * [Dark Theme](#dark-theme)
+  * [Light Theme](#light-theme)
+- [Supported Languages](#supported-languages)
 
+# Why yet another code highlighter?
 
-# Usage
-* Install/Include dependency (npm module or script)
-* Add Selector and pass attributes in your HTML page
+> There are many syntax highlighters avaliable already but most of those are either complex to setup or front end framework specific. `@favware/syntax-highlighter-core` is built using StencilJS. You can use it everywhere, i.e. Angular, React, Vue, any framework, No Framework!
+>
+> **This is an adoptation of [snippet-highlight] from [rahulbhooteshwar]**
 
-```javascript
-  <snippet-highlight theme="dark" language="javascript" content="your code-snippet"/>
-```
-# Installation
-1. Install as npm module
-    ```
-    npm i snippet-highlight
-    ```
-    OR
+# Features
 
-    ```
-    yarn add snippet-highlight
-    ```
-2. Or, Include as script on your HTML page
-    ```html
-    <script src="https://unpkg.com/snippet-highlight/dist/snippet-highlight.js"></script>
-    ```
+-   Uses [PrismJS] for syntax highlighting
+-   Light and Dark mode supported
+-   Copy code support
+-   Supports many languages, see [Supported Languages](#supported-languages)
+-   Will default to using [Fira Code] as font family
+    -   The library first falls back to popular fonts such as [Cascadia Code] and [Meslo NGF] if it isn't available. If these are also not available it will go through various more popular coding fonts, ending in `monospace`
 
-# Framework Integration
+Check out the [live demo](https://syntax-highlighter.now.sh/) for further examples.
 
-# No Framework or Any Framework
-* Include the script as shown [above](#installation)
-* Use the selector as shown in [usage](#usage)
+# Supported Languages
 
-# Angular
+To limit the size of this library a selection has been made from all langauges supported by PrismJS. The chosen languages are those that we consider the most popular / common. If you want to see another languages supported you're always free to open [an issue]
 
-Using `snippet-highlight` within an Angular CLI project is a two-step process. We need to:
+`javascript`, `typescript`, `asciidoc`, `autohotkey`, `autoit`, `bash`, `batch`,
+`c`, `clike`, `clojure`, `coffeescript`, `cpp`, `csharp`, `csp`, `css`, `dart`,
+`diff`, `docker`, `elixir`, `gherkin`, `git`, `go`, `graphql`, `groovy`, `http`,
+`ini`, `java`, `json`, `jsx`, `kotlin`, `less`, `lua`, `makefile`, `markdown`,
+`nginx`, `objectivec`, `powershell`, `python`, `ruby`, `rust`, `sass`, `scala`,
+`scss`, `sql`, `swift`, `vim`, `visual-basic`, `wasm`, `wiki`, `yaml`
 
-1. Include the `CUSTOM_ELEMENTS_SCHEMA` in the modules that use the components
-1. Call `defineCustomElements(window)` from `main.ts` (or some other appropriate place)
+<!-- LINK DUMP -->
 
-## Including the Custom Elements Schema
-
-Including the `CUSTOM_ELEMENTS_SCHEMA` in the module allows the use of the web components in the HTML markup without the compiler producing errors. Here is an example of adding it to `AppModule`:
-
-```tsx
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
-
-@NgModule({
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
-})
-export class AppModule {}
-```
-
-The `CUSTOM_ELEMENTS_SCHEMA` needs to be included in any module that uses custom elements.
-
-## Calling defineCustomElements
-
-`snippet-highlight` includes a main function that is used to load the components in the collection. That function is called `defineCustomElements()` and it needs to be called once during the bootstrapping of your application. One convenient place to do this is in `main.ts` as such:
-
-```tsx
-import { defineCustomElements } from 'snippet-highlight/dist/loader';
-
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.log(err));
-defineCustomElements(window);
-```
-
-# React
-With an application built using the `create-react-app` script the easiest way to include the component library is to call `defineCustomElements(window)` from the `index.js` file.
-
-```tsx
-import { defineCustomElements } from 'snippet-highlight/dist/loader';
-defineCustomElements(window);
-  ```
-# Vue
-In order to use the custom element library within the Vue app, the application must be modified to define the custom elements and to inform the Vue compiler which elements to ignore during compilation. This can all be done within the `main.js` file. For example:
-
-```tsx
-import Vue from 'vue';
-import App from './App.vue';
-import { defineCustomElements } from 'snippet-highlight/dist/loader';
-
-Vue.config.productionTip = false;
-Vue.config.ignoredElements = [/snippet-\w*/];
-
-defineCustomElements(window);
-
-new Vue({
-  render: h => h(App)
-}).$mount('#app');
-```
-
-
-
-## Properties
-
-<table border="1">
-<thead>
-  <td><strong>Attribute</strong></td>
-  <td><strong>Type</strong></td>
-  <td><strong>Possible Values</strong></td>
-  <td><strong>Description</strong></td>
-</thead>
-<tr>
-  <td>content</td>
-  <td>string</td>
-  <td>Any code snippet in any of the supported languages</td>
-  <td>Code snippet to be highlighted</td>
-</tr>
-<tr>
-  <td>language</td>
-  <td>string</td>
-  <td>Any supported Language (See the list below), html (default)</td>
-  <td>e.g. html, xml, java, javascript, css etc</td>
-</tr>
-<tr>
-  <td>theme</td>
-  <td>string</td>
-  <td>dark(default), light</td>
-  <td>Look and feel of code snippet</td>
-</tr>
-</table>
-
-## Supported Languages
-
-
-> `clike`,  `ruby`, `crystal`,  `csharp`,  `dotnet`,  `markup-templating`,  `markup`,  `xml`,  `html`,  `mathml`,  `svg`,  `django`,  `jinja2`,  `javascript`,  `js`,  `csp`,  `css`,  `d`,  `dart`,  `diff`,  `docker`,  `dockerfile`,  `eiffel`,  `elixir`,  `elm`,  `erb`,  `erlang`,  `flow`,  `fortran`,  `fsharp`,  `gedcom`,  `gherkin`,  `git`,  `glsl`,  `go`,  `graphql`,  `groovy`,  `haml`,  `handlebars`,  `haskell`,  `haxe`,  `hpkp`,  `hsts`,  `http`,  `ichigojam`,  `icon`,  `inform7`,  `ini`,  `io`,  `j`,  `java`,  `jolie`,  `json`,  `jsonp`,  `jsx`,  `julia`,  `keyman`,  `kotlin`,  `latex`,  `less`,  `liquid`,  `lisp`,  `elisp`,  `emacs`,  `emacs-lisp`,  `livescript`,  `lolcode`,  `lua`,  `makefile`,  `markdown`,  `matlab`,  `mel`,  `mizar`,  `monkey`,  `n4js`,  `n4jsd`,  `nasm`,  `nginx`,  `nim`,  `nix`,  `nsis`,  `ocaml`,  `oz`,  `parigp`,  `parser`,  `pascal`,  `objectpascal`,  `perl`,  `php`,  `sql`,  `plsql`,  `powershell`,  `processing`,  `prolog`,  `properties`,  `protobuf`,  `pug`,  `puppet`,  `pure`,  `python`,  `q`,  `qore`,  `r`,  `reason`,  `renpy`,  `rest`,  `rip`,  `roboconf`,  `rust`,  `sas`,  `sass`,  `scala`,  `scheme`,  `scss`,  `smalltalk`,  `smarty`,  `soy`,  `stylus`,  `swift`,  `tap`,  `tcl`,  `textile`,  `tsx`,  `tt2`,  `twig`,  `typescript`,  `ts`,  `velocity`,  `verilog`,  `vhdl`,  `vim`,  `visual-basic`,  `vb`,  `wasm`,  `wiki`,  `xeora`,  `xeoracube`,  `xojo`,  `xquery`,  `yaml`
-
-# Browser Support
-`snippet-highlight` is well verified on all modern browsers using Browser Stack. Using browserstack we make sure cross browser compatibility of the module, so that it works seamlessly on all supported browsers. Browserstack has helped us in identifying issues at very early stage.
-
-[![Browser Stack](https://bstacksupport.zendesk.com/attachments/token/PzdqcKEmprO9zGDgG7ASHgcqi/?name=browserstack-logo-600x315.png)](http://browserstack.com/) 
-
-
-
-# Demo
-
-## Dark Theme
-![Dark Theme HTML](https://res.cloudinary.com/designu/image/upload/v1546001737/CD32853C_aepc2b.png "Dark Theme HTML")
-
-## Light Theme
-![Light Theme Groovy](https://res.cloudinary.com/designu/image/upload/v1546001847/8F82AC0D_hzxt3l.png "Light Theme Groovy")
+[snippet-highlight]: https://github.com/rahulbhooteshwar/snippet-highlight
+[rahulbhooteshwar]: https://github.com/rahulbhooteshwar
+[supported languages]: https://prismjs.com/#supported-languages
+[prismjs]: https://prismjs.com/
+[fira code]: https://github.com/tonsky/FiraCode
+[cascadia code]: https://github.com/microsoft/cascadia-code
+[meslo ngf]: https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k
+[an issue]: https://github.com/favware/syntax-highlighter/issues/new

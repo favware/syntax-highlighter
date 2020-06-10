@@ -1,24 +1,39 @@
+# dependencies
+node_modules/
+/.pnp
+.pnp.js
+package-lock.json
+
+# IDE config
+.idea/
+.vscode/
+
+
+# Output
 dist/
+docs/
+build-scripts/
+build/
 www/
-src/components.d.ts
+loader/
+*.tsbuildinfo
+*.js
+*.jsx
+*.js.map
+*.jsx.map
+*.tgz
+
+# Misc
 *~
 *.sw[mnpcod]
 *.log
-*.lock
 *.tmp
 *.tmp.*
 log.txt
-*.sublime-project
-*.sublime-workspace
-
-.stencil/
-.idea/
-.vscode/
 .sass-cache/
 .versions/
-node_modules/
+.stencil/
 $RECYCLE.BIN/
-
 .DS_Store
 Thumbs.db
 UserInterfaceState.xcuserstate
