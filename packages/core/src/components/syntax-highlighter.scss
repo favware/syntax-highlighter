@@ -1,3 +1,5 @@
+@import './themes/variables';
+
 syntax-highlighter {
 	.syntaxhighlighter__hidden {
 		display: none;
@@ -71,7 +73,7 @@ syntax-highlighter {
 					box-shadow: none;
 					border-radius: 5px;
 					margin-right: 10px;
-					font-family: monospace;
+					font-family: $codingFonts;
 				}
 
 				.syntaxhighlighter__language-label:hover {
@@ -110,7 +112,7 @@ syntax-highlighter {
 					box-shadow: none;
 					border-radius: 5px;
 					margin-right: 10px;
-					font-family: monospace;
+					font-family: $codingFonts;
 
 					border: none;
 					cursor: pointer;
