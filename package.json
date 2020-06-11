@@ -11,7 +11,8 @@
 		"build:react": "yarn workspace @favware/syntax-highlighter-react build",
 		"commit": "git-cz",
 		"cz": "git-cz",
-		"up": "yarn upgrade-interactive --latest"
+		"up": "yarn upgrade-interactive --latest",
+		"style": "prettier --write packages/**/*.{ts,tsx,js,jsx,json,html,md}"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^8.3.5",

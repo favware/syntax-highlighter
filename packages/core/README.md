@@ -40,6 +40,24 @@
 </a>
 </div>
 
+**_Table of Contents_**
+
+-   [Why yet another code highlighter?](#why-yet-another-code-highlighter)
+-   [Features](#features)
+-   [Installation](#installation)
+    -   [Install Package](#install-package)
+        -   [Framework Integration](#framework-integration)
+            -   [Angular](#angular)
+                -   [Including the Custom Element Schema](#including-the-custom-element-schema)
+                -   [Calling defineCustomElements](#calling-definecustomelements)
+                -   [Edge and IE11 polyfills](#edge-and-ie11-polyfills)
+                -   [Accessing components using ViewChild and ViewChildren](#accessing-components-using-viewchild-and-viewchildren)
+            -   [React](#react)
+            -   [Vue](#vue)
+            -   [No Framework](#no-framework)
+    -   [Usage](#usage)
+-   [Supported Languages](#supported-languages)
+
 # Why yet another code highlighter?
 
 > There are many syntax highlighters avaliable already but most of those are either complex to setup or front end framework specific. `@favware/syntax-highlighter-core` is built using StencilJS. You can use it everywhere, i.e. Angular, React, Vue, any framework, No Framework!
@@ -68,13 +86,88 @@ yarn add @favware/syntax-highlighter-core
 
 #### Angular
 
-// TODO: Set up Angular output and check that it works
+##### Including the Custom Element Schema
 
-See [@favware/syntax-highlighter-angular]
+Including the `CUSTOM_ELEMENTS_SCHEMA` in the module allows the use of the web components in the HTML markup without the compiler producing errors. This code should be added into the `AppModule` and in every other modules that use your custom elements. Here is an example of adding it to `AppModule`:
+
+```ts
+import { BrowserModule } from '@angular/platform-browser';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+
+import { AppComponent } from './app.component';
+
+@NgModule({
+	declarations: [AppComponent],
+	imports: [BrowserModule],
+	bootstrap: [AppComponent],
+	schemas: [CUSTOM_ELEMENTS_SCHEMA]
+})
+export class AppModule {}
+```
+
+The `CUSTOM_ELEMENTS_SCHEMA` needs to be included in any module that uses custom elements.
+
+##### Calling defineCustomElements
+
+A component collection built with Stencil includes a main function that is used to load the components in the collection. That function is called `defineCustomElements()` and it needs to be called once during the bootstrapping of your application. One convenient place to do this is in `main.ts` as such:
+
+```ts
+import { enableProdMode } from '@angular/core';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+
+import { AppModule } from './app/app.module';
+import { environment } from './environments/environment';
+
+import { defineCustomElements } from '@favware/syntax-highlighter-core/loader';
+
+if (environment.production) {
+	enableProdMode();
+}
+
+platformBrowserDynamic()
+	.bootstrapModule(AppModule)
+	.catch(err => console.log(err));
+
+// Loading @favware/syntax-highlighter-core
+defineCustomElements();
+```
+
+##### Edge and IE11 polyfills
+
+If you want your custom elements to be able to work on older browsers, you should add the `applyPolyfills()` that surround the `defineCustomElements()` function.
+
+```ts
+import { applyPolyfills, defineCustomElements } from '@favware/syntax-highlighter-core/loader';
+
+applyPolyfills().then(() => {
+	defineCustomElements();
+});
+```
+
+##### Accessing components using ViewChild and ViewChildren
+
+Once included, components could be referenced in your code using `ViewChild` and `ViewChildren` as in the following example:
+
+```ts
+import { Component, ElementRef, ViewChild } from '@angular/core';
+
+import '@favware/syntax-highlighter-core';
+
+@Component({
+	selector: 'app-home',
+	template: `<sytax-highlighter language="ts" theme="dark" content="import _ from 'lodash'"/>`,
+	styleUrls: ['./home.component.css']
+})
+export class HomeComponent {
+	@ViewChild('test') syntaxHighlighter: ElementRef<HTMLTestComponentElement>;
+
+	async onAction() {
+		await this.syntaxHighlighter.nativeElement.testComponentMethod();
+	}
+}
+```
 
 #### React
-
-// TODO: Verify that react output works
 
 See [@favware/syntax-highlighter-react]
 
@@ -142,3 +235,4 @@ To limit the size of this library a selection has been made from all langauges s
 [snippet-highlight]: https://github.com/rahulbhooteshwar/snippet-highlight
 [rahulbhooteshwar]: https://github.com/rahulbhooteshwar
 [an issue]: https://github.com/favware/syntax-highlighter/issues/new
+[@favware/syntax-highlighter-react]: https://yarnpkg.com/package/@favware/syntax-highlighter-react

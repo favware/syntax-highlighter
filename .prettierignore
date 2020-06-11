@@ -1,2 +1,9 @@
-packages/react/src/index.ts
-packages/react/src/react-component-lib/utils/attachEventProps.ts
+packages/core/dist/
+packages/core/loader/
+packages/core/node_modules/
+packages/core/src/components.d.ts
+packages/core/src/components/readme.md
+packages/core/www/
+packages/react/dist/
+packages/react/node_modules/
+packages/react/src/

@@ -40,6 +40,14 @@
 </a>
 </div>
 
+**_Table of Contents_**
+
+-   [Why yet another code highlighter?](#why-yet-another-code-highlighter)
+-   [Features](#features)
+-   [Installation](#installation)
+    -   [Usage](#usage)
+-   [Supported Languages](#supported-languages)
+
 # Why yet another code highlighter?
 
 > There are many syntax highlighters avaliable already but most of those are either complex to setup or front end framework specific. `@favware/syntax-highlighter-core` is built using StencilJS. You can use it everywhere, i.e. Angular, React, Vue, any framework, No Framework!
