@@ -11,12 +11,11 @@
 	"types": "dist/types/index.d.ts",
 	"collection": "dist/collection/collection-manifest.json",
 	"collection:main": "dist/collection/index.js",
-	"unpkg": "dist/favware-syntax-highlighter-core/favware-syntax-highlighter-core.js",
+	"unpkg": "dist/favware-syntax-highlighter-core/favware-syntax-highlighter-core.esm.js",
 	"homepage": "https://github.com/favware/syntax-highlighter/tree/master/packages/core#readme",
 	"scripts": {
 		"build": "stencil build --docs",
-		"serve": "stencil build --dev --watch --serve",
-		"generate": "stencil generate"
+		"serve": "stencil build --dev --watch --serve"
 	},
 	"dependencies": {
 		"clipboard": "^2.0.6",
@@ -30,8 +29,7 @@
 		"lib": "src"
 	},
 	"files": [
-		"dist/",
-		"loader/"
+		"dist/"
 	],
 	"engines": {
 		"node": ">=10"
