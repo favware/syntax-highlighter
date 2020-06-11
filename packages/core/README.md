@@ -183,24 +183,32 @@ In order to use the custom element library within the Vue app, the application m
 ```tsx
 import Vue from 'vue';
 import App from './App.vue';
-import { defineCustomElements } from '@favware/syntax-highlighter-core/loader';
+import { applyPolyfills, defineCustomElements } from '@favware/syntax-highlighter-core/loader';
 
 Vue.config.productionTip = false;
-Vue.config.ignoredElements = [/snippet-\w*/];
+// Tell Vue to ignore all components defined in the @favware/syntax-highlighter-core package.
+Vue.config.ignoredElements = [/syntax-highlighter\w*/];
 
-defineCustomElements(window);
+// Bind the custom elements to the window object
+applyPolyfills().then(() => {
+	defineCustomElements();
+});
 
 new Vue({
 	render: h => h(App)
 }).$mount('#app');
 ```
 
-Import it and call the necessary functions in your app entry file.
+The components should then be available in any of the Vue components
 
-```ts
-import { applyPolyfills, defineCustomElements } from '@favware/syntax-highlighter-core/loader';
-
-applyPolyfills().then(() => defineCustomElements(window));
+```tsx
+render() {
+  return (
+    <div>
+      <syntax-highlighter theme="dark" language="javascript" content="import { SyntaxHighlighter } from @favware/syntax-highlighter-react" />
+    </div>
+  )
+}
 ```
 
 #### No Framework
