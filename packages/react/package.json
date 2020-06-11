@@ -1,6 +1,6 @@
 {
 	"name": "@favware/syntax-highlighter-react",
-	"version": "0.1.0-alpha.0",
+	"version": "0.1.0-alpha.1",
 	"description": "React bindings for @skyra/syntax-highlighter-core",
 	"author": "@favware",
 	"license": "MIT",
