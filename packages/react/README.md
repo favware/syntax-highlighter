@@ -58,8 +58,8 @@ Check out the [live demo](https://syntax-highlighter.now.sh/) for further exampl
 # Installation
 
 ```bash
-yarn add favware/syntax-highlighter-core favware/syntax-highlighter-react
-# or npm install favware/syntax-highlighter-core favware/syntax-highlighter-react
+yarn add @favware/syntax-highlighter-core @favware/syntax-highlighter-react
+# or npm install @favware/syntax-highlighter-core @favware/syntax-highlighter-react
 ```
 
 ## Usage
