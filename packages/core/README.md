@@ -126,10 +126,15 @@ The syntax is kept fairly simple. Here's a basic example of a regular conversati
 To limit the size of this library a selection has been made from all langauges supported by PrismJS. The chosen languages are those that we consider the most popular / common. If you want to see another languages supported you're always free to open [an issue]
 
 `javascript`, `typescript`, `asciidoc`, `autohotkey`, `autoit`, `bash`, `batch`,  
+&nbsp;  
 `c`, `clike`, `clojure`, `coffeescript`, `cpp`, `csharp`, `csp`, `css`, `dart`,  
+&nbsp;  
 `diff`, `docker`, `elixir`, `gherkin`, `git`, `go`, `graphql`, `groovy`, `http`,  
+&nbsp;  
 `ini`, `java`, `json`, `jsx`, `kotlin`, `less`, `lua`, `makefile`, `markdown`,  
+&nbsp;  
 `nginx`, `objectivec`, `powershell`, `python`, `ruby`, `rust`, `sass`, `scala`,  
+&nbsp;  
 `scss`, `sql`, `swift`, `vim`, `visual-basic`, `wasm`, `wiki`, `yaml`
 
 <!-- LINK DUMP -->
