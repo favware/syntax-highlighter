@@ -29,7 +29,8 @@
 		"lib": "src"
 	},
 	"files": [
-		"dist/"
+		"dist/",
+		"loader/"
 	],
 	"engines": {
 		"node": ">=10"
