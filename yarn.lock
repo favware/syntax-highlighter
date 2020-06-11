@@ -242,30 +242,30 @@
     unique-filename "^1.1.1"
     which "^1.3.1"
 
-"@favware/eslint-config-react-app@^0.1.0-alpha.0":
-  version "0.1.0-alpha.0"
-  resolved "https://registry.yarnpkg.com/@favware/eslint-config-react-app/-/eslint-config-react-app-0.1.0-alpha.0.tgz#44a00181da88ca50974ef981dfe9e0b1432dab0b"
-  integrity sha512-yyDigimj8P9QBL9YNwgaJzO6vpFD7XRbi4cXOvTkSpGuC0Qh+nOW4RDM0bSqOJ5XqZSlNnHAMYIYpHo+fpkp2w==
+"@favware/eslint-config-react-app@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@favware/eslint-config-react-app/-/eslint-config-react-app-1.0.0.tgz#627e13f95a6492fae7f17c7782c46112b5394909"
+  integrity sha512-aqD/zY9Mo+ddqcA2L2pDgrwCvCYh1SW+qvV8e+M/cW4ge1seEEc9DFQa6Y1r4afH3jr24I3diAyxeah7GGtBUQ==
   dependencies:
-    "@favware/eslint-config" "^5.0.0"
+    "@favware/eslint-config" latest
     eslint-plugin-import "^2.20.2"
     eslint-plugin-jsx-a11y "^6.2.3"
     eslint-plugin-react "^7.20.0"
     eslint-plugin-react-hooks "^4.0.4"
 
-"@favware/eslint-config@^5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@favware/eslint-config/-/eslint-config-5.0.0.tgz#2e3c8ab27d62597d0c95184a8be1e856d93cb3fb"
-  integrity sha512-htoPGfwyZ9BfG3pJyQ9vXn3b90clUu/pIOL+uDShpHljuQH+mk4ETol/fX4oWhAP3h7DT2eKSAj7WavY9qDuGw==
+"@favware/eslint-config@latest":
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/@favware/eslint-config/-/eslint-config-5.0.2.tgz#b7772749f1ddce2833c25df8b1334a9eaa5be2fb"
+  integrity sha512-ijH9QnHc1Jv9V0jFT5WJ6aYFQ/nC2oOfiXiVBYh/uGuUOu4MVtRBj2UVy/GbtRk2+vmMsI5PBG97WQd0KpJa5A==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^3.1.0"
     "@typescript-eslint/parser" "^3.1.0"
     eslint "^7.2.0"
 
-"@favware/ts-config@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@favware/ts-config/-/ts-config-3.0.0.tgz#7230f447745e40dc6f868ba17fa97927fff82ba2"
-  integrity sha512-0aivPOrru5nAYGFdFZFaw9rODYXMvinmHhk9+78JJlqLoLNIukHZg614dSiUteScB5lpyeh38ZbWr2yuWBB51Q==
+"@favware/ts-config@^3.0.2":
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@favware/ts-config/-/ts-config-3.0.2.tgz#4b8c96efc1ffe6359a6fda10c1a8211266308df7"
+  integrity sha512-T20sRidRETqffgiCzY+vi6uri0W30YUUD9ENZKpBz3+L4xkwoeBxVDqWjTk2OQBNhHFWsuoT4gRY4eBhczWdnw==
 
 "@lerna/add@3.21.0":
   version "3.21.0"
@@ -1217,7 +1217,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^16.9.35":
+"@types/react@*", "@types/react@^16.9.36":
   version "16.9.36"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.9.36.tgz#ade589ff51e2a903e34ee4669e05dbfa0c1ce849"
   integrity sha512-mGgUb/Rk/vGx4NCvquRuSH0GHBQKb1OqpGS9cT9lFxlTLHZgkksgI60TuIxubmn7JuCb+sENHhQciqa0npm0AQ==
@@ -1304,9 +1304,9 @@ acorn-jsx@^5.2.0:
   integrity sha512-HiUX/+K2YpkpJ+SzBffkM/AQ2YE03S0U1kjTLVpoJdhZMOWy8qvXVN9JdLqv2QsaQ6MPYQIuNmwD8zOiYUofLQ==
 
 acorn@^7.2.0:
-  version "7.2.0"
-  resolved "https://registry.yarnpkg.com/acorn/-/acorn-7.2.0.tgz#17ea7e40d7c8640ff54a694c889c26f31704effe"
-  integrity sha512-apwXVmYVpQ34m/i71vrApRrRKCWQnZZF1+npOD0WV5xZFfwWOmKGQ2RWlfdy9vWITsenisM8M0Qeq8agcFHNiQ==
+  version "7.3.1"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-7.3.1.tgz#85010754db53c3fbaf3b9ea3e083aa5c5d147ffd"
+  integrity sha512-tLc0wSnatxAQHVHUapaHdz72pi9KUyHjq5KyHjGg9Y8Ifdc79pTh2XvI6I1/chZbnM7QtNKzh66ooDogPZSleA==
 
 agent-base@4, agent-base@^4.3.0:
   version "4.3.0"
@@ -5910,7 +5910,7 @@ rollup-plugin-typescript2@^0.27.1:
     resolve "1.15.1"
     tslib "1.11.2"
 
-rollup@^2.13.1:
+rollup@^2.15.0:
   version "2.15.0"
   resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.15.0.tgz#1324633188c7f82138bd3bdc99416009ee541f48"
   integrity sha512-HAk4kyXiV5sdNDnbKWk5zBPnkX/DAgx09Kbp8rRIRDVsTUVN3vnSowR7ZHkV6/lAiE6c2TQ8HtYb72aCPGW4Jw==
