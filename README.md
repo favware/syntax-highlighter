@@ -18,14 +18,15 @@
 </a>
 </div>
 
-***Table of Contents***
-- [Why yet another code highlighter?](#why-yet-another-code-highlighter)
-- [Features](#features)
-  * [Properties](#properties)
-- [Screenshots](#screenshots)
-  * [Dark Theme](#dark-theme)
-  * [Light Theme](#light-theme)
-- [Supported Languages](#supported-languages)
+**_Table of Contents_**
+
+-   [Why yet another code highlighter?](#why-yet-another-code-highlighter)
+-   [Features](#features)
+    -   [Properties](#properties)
+-   [Screenshots](#screenshots)
+    -   [Dark Theme](#dark-theme)
+    -   [Light Theme](#light-theme)
+-   [Supported Languages](#supported-languages)
 
 # Why yet another code highlighter?
 
@@ -48,11 +49,11 @@ Check out the [live demo](https://syntax-highlighter.now.sh/) for further exampl
 
 To limit the size of this library a selection has been made from all langauges supported by PrismJS. The chosen languages are those that we consider the most popular / common. If you want to see another languages supported you're always free to open [an issue]
 
-`javascript`, `typescript`, `asciidoc`, `autohotkey`, `autoit`, `bash`, `batch`,
-`c`, `clike`, `clojure`, `coffeescript`, `cpp`, `csharp`, `csp`, `css`, `dart`,
-`diff`, `docker`, `elixir`, `gherkin`, `git`, `go`, `graphql`, `groovy`, `http`,
-`ini`, `java`, `json`, `jsx`, `kotlin`, `less`, `lua`, `makefile`, `markdown`,
-`nginx`, `objectivec`, `powershell`, `python`, `ruby`, `rust`, `sass`, `scala`,
+`javascript`, `typescript`, `asciidoc`, `autohotkey`, `autoit`, `bash`, `batch`,  
+`c`, `clike`, `clojure`, `coffeescript`, `cpp`, `csharp`, `csp`, `css`, `dart`,  
+`diff`, `docker`, `elixir`, `gherkin`, `git`, `go`, `graphql`, `groovy`, `http`,  
+`ini`, `java`, `json`, `jsx`, `kotlin`, `less`, `lua`, `makefile`, `markdown`,  
+`nginx`, `objectivec`, `powershell`, `python`, `ruby`, `rust`, `sass`, `scala`,  
 `scss`, `sql`, `swift`, `vim`, `visual-basic`, `wasm`, `wiki`, `yaml`
 
 <!-- LINK DUMP -->

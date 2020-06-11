@@ -125,11 +125,11 @@ The syntax is kept fairly simple. Here's a basic example of a regular conversati
 
 To limit the size of this library a selection has been made from all langauges supported by PrismJS. The chosen languages are those that we consider the most popular / common. If you want to see another languages supported you're always free to open [an issue]
 
-`javascript`, `typescript`, `asciidoc`, `autohotkey`, `autoit`, `bash`, `batch`,
-`c`, `clike`, `clojure`, `coffeescript`, `cpp`, `csharp`, `csp`, `css`, `dart`,
-`diff`, `docker`, `elixir`, `gherkin`, `git`, `go`, `graphql`, `groovy`, `http`,
-`ini`, `java`, `json`, `jsx`, `kotlin`, `less`, `lua`, `makefile`, `markdown`,
-`nginx`, `objectivec`, `powershell`, `python`, `ruby`, `rust`, `sass`, `scala`,
+`javascript`, `typescript`, `asciidoc`, `autohotkey`, `autoit`, `bash`, `batch`,  
+`c`, `clike`, `clojure`, `coffeescript`, `cpp`, `csharp`, `csp`, `css`, `dart`,  
+`diff`, `docker`, `elixir`, `gherkin`, `git`, `go`, `graphql`, `groovy`, `http`,  
+`ini`, `java`, `json`, `jsx`, `kotlin`, `less`, `lua`, `makefile`, `markdown`,  
+`nginx`, `objectivec`, `powershell`, `python`, `ruby`, `rust`, `sass`, `scala`,  
 `scss`, `sql`, `swift`, `vim`, `visual-basic`, `wasm`, `wiki`, `yaml`
 
 <!-- LINK DUMP -->
