@@ -55,8 +55,7 @@ import 'prismjs/components/prism-yaml.min.js';
 
 @Component({
 	tag: 'syntax-highlighter',
-	styleUrl: 'syntax-highlighter.scss'
-	// shadow: false
+	styleUrl: 'syntax-highlighter.css'
 })
 export class SyntaxHighlighter {
 	/**

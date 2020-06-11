@@ -1,6 +1,5 @@
 import { Config } from '@stencil/core';
 import { reactOutputTarget } from '@stencil/react-output-target';
-import { sass } from '@stencil/sass';
 
 export const config: Config = {
 	namespace: 'favware-syntax-highlighter-core',
@@ -23,6 +22,5 @@ export const config: Config = {
 			type: 'www',
 			serviceWorker: null
 		}
-	],
-	plugins: [sass()]
+	]
 };
