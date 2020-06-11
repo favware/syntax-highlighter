@@ -91,14 +91,14 @@ yarn add @favware/syntax-highlighter-core
 Including the `CUSTOM_ELEMENTS_SCHEMA` in the module allows the use of the web components in the HTML markup without the compiler producing errors. This code should be added into the `AppModule` and in every other modules that use your custom elements. Here is an example of adding it to `AppModule`:
 
 ```ts
-import { BrowserModule } from '@angular/platform-browser';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
-
+import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 
 @NgModule({
 	declarations: [AppComponent],
 	imports: [BrowserModule],
+	providers: [],
 	bootstrap: [AppComponent],
 	schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
@@ -114,11 +114,9 @@ A component collection built with Stencil includes a main function that is used 
 ```ts
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-
+import { defineCustomElements } from '@favware/syntax-highlighter-core/loader';
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
-
-import { defineCustomElements } from '@favware/syntax-highlighter-core/loader';
 
 if (environment.production) {
 	enableProdMode();
@@ -126,7 +124,7 @@ if (environment.production) {
 
 platformBrowserDynamic()
 	.bootstrapModule(AppModule)
-	.catch(err => console.log(err));
+	.catch(err => console.error(err));
 
 // Loading @favware/syntax-highlighter-core
 defineCustomElements();
@@ -146,25 +144,32 @@ applyPolyfills().then(() => {
 
 ##### Accessing components using ViewChild and ViewChildren
 
-Once included, components could be referenced in your code using `ViewChild` and `ViewChildren` as in the following example:
+If you would like to dynamically set the content of syntax highlighted codeblock you can do so by leveraging `ViewChild` and `ViewChildren` as in the following example:
 
 ```ts
+// app.component.ts
 import { Component, ElementRef, ViewChild } from '@angular/core';
-
 import '@favware/syntax-highlighter-core';
 
 @Component({
-	selector: 'app-home',
-	template: `<sytax-highlighter language="ts" theme="dark" content="import _ from 'lodash'"/>`,
-	styleUrls: ['./home.component.css']
+	selector: 'app-root',
+	templateUrl: './app.component.html',
+	styleUrls: []
 })
-export class HomeComponent {
-	@ViewChild('test') syntaxHighlighter: ElementRef<HTMLTestComponentElement>;
+export class AppComponent {
+	@ViewChild('codeblock') syntaxCodeblock: ElementRef<HTMLSyntaxHighlighterElement>;
 
 	async onAction() {
-		await this.syntaxHighlighter.nativeElement.testComponentMethod();
+		this.syntaxCodeblock.nativeElement.content = "import '@favware/syntax-highlighter-core';";
+		this.syntaxCodeblock.nativeElement.language = 'typescript';
 	}
 }
+```
+
+```html
+<!-- app.component.html -->
+<!-- Values can be passed similar to the normal usage -->
+<syntax-highlighter #codeblock theme="dark" language="typescript" content="import '@favware/syntax-highlighter-core';"></syntax-highlighter>
 ```
 
 #### React
