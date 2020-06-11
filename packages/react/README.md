@@ -69,7 +69,7 @@ The syntax is kept fairly simple. Here's a basic example of some simple JavaScri
 ```tsx
 import { SyntaxHighlighter } from '@favware/syntax-highlighter-react';
 
-<SyntaxHighlighter theme="dark" language="javascript" content="import { SyntaxHighlighter } from @favware/syntax-highlighter-react" />
+<SyntaxHighlighter theme="dark" language="javascript" content="import { SyntaxHighlighter } from @favware/syntax-highlighter-react" />;
 ```
 
 # Supported Languages
