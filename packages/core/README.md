@@ -86,6 +86,8 @@ yarn add @favware/syntax-highlighter-core
 
 #### Angular
 
+// TODO: Add Angular codesandbox
+
 ##### Including the Custom Element Schema
 
 Including the `CUSTOM_ELEMENTS_SCHEMA` in the module allows the use of the web components in the HTML markup without the compiler producing errors. This code should be added into the `AppModule` and in every other modules that use your custom elements. Here is an example of adding it to `AppModule`:
@@ -174,9 +176,13 @@ export class AppComponent {
 
 #### React
 
+// TODO: Add React codesandbox
+
 See [@favware/syntax-highlighter-react]
 
 #### Vue
+
+// TODO: Add Vue codesandbox
 
 In order to use the custom element library within the Vue app, the application must be modified to define the custom elements and to inform the Vue compiler which elements to ignore during compilation. This can all be done within the `main.js` file. For example:
 
