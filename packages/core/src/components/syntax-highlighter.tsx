@@ -46,6 +46,7 @@ import 'prismjs/components/prism-scala.min.js';
 import 'prismjs/components/prism-scss.min.js';
 import 'prismjs/components/prism-sql.min.js';
 import 'prismjs/components/prism-swift.min.js';
+import 'prismjs/components/prism-tsx.min.js';
 import 'prismjs/components/prism-typescript.min.js';
 import 'prismjs/components/prism-vim.min.js';
 import 'prismjs/components/prism-visual-basic.min.js';

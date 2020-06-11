@@ -86,7 +86,7 @@ To limit the size of this library a selection has been made from all langauges s
 &nbsp;  
 `nginx`, `objectivec`, `powershell`, `python`, `ruby`, `rust`, `sass`, `scala`,  
 &nbsp;  
-`scss`, `sql`, `swift`, `vim`, `visual-basic`, `wasm`, `wiki`, `yaml`
+`scss`, `sql`, `swift`, `tsx`, `vim`, `visual-basic`, `wasm`, `wiki`, `yaml`
 
 <!-- LINK DUMP -->
 
