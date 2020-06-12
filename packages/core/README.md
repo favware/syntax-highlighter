@@ -84,9 +84,7 @@ yarn add @favware/syntax-highlighter-core
 
 ### Framework Integration
 
-#### Angular
-
-// TODO: Add Angular codesandbox
+#### Angular - [Sample on CodeSanbox](https://codesandbox.io/s/syntax-highlighter-angular-0qb8k)
 
 ##### Including the Custom Element Schema
 
@@ -174,15 +172,11 @@ export class AppComponent {
 <syntax-highlighter #codeblock theme="dark" language="typescript" content="import '@favware/syntax-highlighter-core';"></syntax-highlighter>
 ```
 
-#### React
-
-// TODO: Add React codesandbox
+#### React - [Sample on CodeSanbox](https://codesandbox.io/s/syntax-highlighter-react-bb90c)
 
 See [@favware/syntax-highlighter-react]
 
-#### Vue
-
-// TODO: Add Vue codesandbox
+#### Vue - [Sample on CodeSanbox](https://codesandbox.io/s/syntax-highlighter-vue-z815p)
 
 In order to use the custom element library within the Vue app, the application must be modified to define the custom elements and to inform the Vue compiler which elements to ignore during compilation. This can all be done within the `main.js` file. For example:
 
@@ -205,16 +199,26 @@ new Vue({
 }).$mount('#app');
 ```
 
-The components should then be available in any of the Vue components
+The components should then be available in any of the Vue templates
 
-```tsx
-render() {
-  return (
-    <div>
-      <syntax-highlighter theme="dark" language="javascript" content="import { SyntaxHighlighter } from @favware/syntax-highlighter-react" />
-    </div>
-  )
-}
+```html
+<template>
+  <syntax-highlighter
+    theme="dark"
+    language="javascript"
+    content="
+<div id='app'>
+  Hello World!
+</div>
+    "
+  />
+</template>
+
+<script>
+export default {
+  name: "App"
+};
+</script>
 ```
 
 #### No Framework

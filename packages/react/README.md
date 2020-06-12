@@ -72,7 +72,7 @@ yarn add @favware/syntax-highlighter-core @favware/syntax-highlighter-react
 
 ## Usage
 
-// TODO: Add React codesandbox
+[Sample on CodeSanbox](https://codesandbox.io/s/syntax-highlighter-react-bb90c)
 
 The syntax is kept fairly simple. Here's a basic example of some simple JavaScript code:
 
