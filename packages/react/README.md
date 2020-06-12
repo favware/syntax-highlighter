@@ -14,21 +14,21 @@
 	</a>
 </p>
 <p>
-<a href="https://www.npmjs.com/package/favware/syntax-highlighter-react">
-<img src="https://img.shields.io/npm/v/favware/syntax-highlighter-react.svg?maxAge=3600&logo=npm&style=flat-square" alt="NPM version" />
+<a href="https://www.npmjs.com/package/@favware/syntax-highlighter-react">
+<img src="https://img.shields.io/npm/v/@favware/syntax-highlighter-react.svg?maxAge=3600&logo=npm&style=flat-square" alt="NPM version" />
 </a>
 	
-<a href="https://www.npmjs.com/package/favware/syntax-highlighter-react">
-<img src="https://img.shields.io/npm/dt/favware/syntax-highlighter-react.svg?maxAge=3600&logo=npm&style=flat-square" alt="NPM downloads" />
+<a href="https://www.npmjs.com/package/@favware/syntax-highlighter-react">
+<img src="https://img.shields.io/npm/dt/@favware/syntax-highlighter-react.svg?maxAge=3600&logo=npm&style=flat-square" alt="NPM downloads" />
 </a>
 </p>
 <p>
-<a href="https://bundlephobia.com/result?p=favware/syntax-highlighter-react">
-<img src="https://img.shields.io/bundlephobia/min/favware/syntax-highlighter-react?label=minified&logo=webpack&maxAge=3600&style=flat-square" alt="Minified Size">
+<a href="https://bundlephobia.com/result?p=@favware/syntax-highlighter-react">
+<img src="https://img.shields.io/bundlephobia/min/@favware/syntax-highlighter-react?label=minified&logo=webpack&maxAge=3600&style=flat-square" alt="Minified Size">
 </a>
 
-<a href="https://bundlephobia.com/result?p=favware/syntax-highlighter-react">
-<img src="https://img.shields.io/bundlephobia/minzip/favware/syntax-highlighter-react?label=minzipped&logo=webpack&maxAge=3600&style=flat-square" alt="Minzipped Size">
+<a href="https://bundlephobia.com/result?p=@favware/syntax-highlighter-react">
+<img src="https://img.shields.io/bundlephobia/minzip/@favware/syntax-highlighter-react?label=minzipped&logo=webpack&maxAge=3600&style=flat-square" alt="Minzipped Size">
 </a>
 </p>
 
