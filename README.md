@@ -70,7 +70,6 @@ To limit the size of this library a selection has been made from all langauges s
 
 [snippet-highlight]: https://github.com/rahulbhooteshwar/snippet-highlight
 [rahulbhooteshwar]: https://github.com/rahulbhooteshwar
-[supported languages]: https://prismjs.com/#supported-languages
 [prismjs]: https://prismjs.com/
 [fira code]: https://github.com/tonsky/FiraCode
 [cascadia code]: https://github.com/microsoft/cascadia-code
