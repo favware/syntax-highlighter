@@ -1,4 +1,9 @@
 <div align="center">
+
+<p>
+<a href="https://favware.tech/syntaxhighlighter"><img style="height: 200px" src="https://cdn.favware.tech/img/syntax-highlighter.png" height="200" alt="logo"/></a>
+</p>
+
 <p>
 <h1> Syntax Highlighter </h1>
 <h3> A lightweight, easy-to-use and framework agnostic syntax highlighter for your code examples(snippets) in web applications </h3>

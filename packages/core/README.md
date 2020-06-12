@@ -1,4 +1,9 @@
 <div align="center">
+
+<p>
+<a href="https://favware.tech/syntaxhighlighter"><img style="height: 200px" src="https://cdn.favware.tech/img/syntax-highlighter.png" height="200" alt="logo"/></a>
+</p>
+
 <p>
 <h1> @favware/syntax-highlighter-core </h1>
 <h3> A lightweight, easy-to-use and framework agnostic syntax highlighter for your code snippets. </h3>
@@ -203,21 +208,21 @@ The components should then be available in any of the Vue templates
 
 ```html
 <template>
-  <syntax-highlighter
-    theme="dark"
-    language="javascript"
-    content="
+	<syntax-highlighter
+		theme="dark"
+		language="javascript"
+		content="
 <div id='app'>
   Hello World!
 </div>
     "
-  />
+	/>
 </template>
 
 <script>
-export default {
-  name: "App"
-};
+	export default {
+		name: 'App'
+	};
 </script>
 ```
 

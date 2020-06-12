@@ -1,4 +1,9 @@
 <div align="center">
+
+<p>
+<a href="https://favware.tech/syntaxhighlighter"><img style="height: 200px" src="https://cdn.favware.tech/img/syntax-highlighter.png" height="200" alt="logo"/></a>
+</p>
+
 <p>
 <h1> @favware/syntax-highlighter-react </h1>
 <h3> React bindings for favware/syntax-highlighter-core </h3>
