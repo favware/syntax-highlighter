@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/favware/syntax-highlighter/compare/v0.1.0-alpha.3...v1.0.0) (2020-06-12)
+
+**Note:** Version bump only for package @favware/syntax-highlighter-core
+
+
+
+
+
 # [0.1.0-alpha.3](https://github.com/favware/syntax-highlighter/compare/v0.1.0-alpha.2...v0.1.0-alpha.3) (2020-06-11)
 
 
