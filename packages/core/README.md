@@ -78,8 +78,6 @@
 -   Will default to using [Fira Code] as font family
     -   The library first falls back to popular fonts such as [Cascadia Code] and [Meslo NGF] if it isn't available. If these are also not available it will go through various more popular coding fonts, ending in `monospace`
 
-Check out the [live demo](https://syntax-highlighter.now.sh/) for further examples.
-
 # Installation
 
 ## Install Package
