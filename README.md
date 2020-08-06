@@ -9,7 +9,7 @@
 <h3> A lightweight, easy-to-use and framework agnostic syntax highlighter for your code examples(snippets) in web applications </h3>
 </p>
 <p>
-	<a href="https://github.com/favware/syntax-highlighter/blob/master/LICENSE.md">
+	<a href="https://github.com/favware/syntax-highlighter/blob/main/LICENSE.md">
 	<img src="https://img.shields.io/github/license/favware/syntax-highlighter?logo=github&maxAge=3600&style=flat-square" alt="NPM version" />
 	</a>
 </p>

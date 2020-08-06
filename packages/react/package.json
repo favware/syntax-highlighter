@@ -7,7 +7,7 @@
 	"main": "dist/index.js",
 	"module": "dist/index.es.js",
 	"typings": "dist/index.d.ts",
-	"homepage": "https://github.com/favware/syntax-highlighter/tree/master/packages/react#readme",
+	"homepage": "https://github.com/favware/syntax-highlighter/tree/main/packages/react#readme",
 	"scripts": {
 		"build": "rollup -c rollup.config.ts"
 	},
