@@ -1,6 +1,6 @@
 {
 	"name": "@favware/syntax-highlighter-core",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "A lightweight, easy-to-use and framework agnostic syntax highlighter for your code snippets.",
 	"author": "@favware",
 	"license": "MIT",
