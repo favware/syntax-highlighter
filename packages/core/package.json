@@ -19,11 +19,11 @@
 	},
 	"dependencies": {
 		"clipboard": "^2.0.6",
-		"prismjs": "^1.20.0"
+		"prismjs": "^1.21.0"
 	},
 	"devDependencies": {
 		"@stencil/core": "next",
-		"@stencil/react-output-target": "^0.0.6"
+		"@stencil/react-output-target": "^0.0.9"
 	},
 	"directories": {
 		"lib": "src"
