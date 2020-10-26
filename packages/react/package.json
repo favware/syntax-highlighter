@@ -18,12 +18,12 @@
 		"rollup-plugin-cleaner": "^1.0.0",
 		"rollup-plugin-peer-deps-external": "^2.2.3",
 		"rollup-plugin-terser": "^7.0.2",
-		"rollup-plugin-typescript2": "^0.27.2"
+		"rollup-plugin-typescript2": "^0.28.0"
 	},
 	"peerDependencies": {
 		"@favware/syntax-highlighter-core": "latest",
-		"react": "^16.x",
-		"react-dom": "^16.x"
+		"react": "^16.8.x || ^17.x",
+		"react-dom": "^16.8.x || ^17.x"
 	},
 	"directories": {
 		"lib": "src"
