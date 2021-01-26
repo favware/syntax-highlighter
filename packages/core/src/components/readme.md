@@ -15,6 +15,13 @@
 | `theme`           | `theme`             | The theme to use, one of light or dark                | `"dark" \| "light"` | `'dark'`              |
 
 
+## Events
+
+| Event              | Description                                                             | Type                 |
+| ------------------ | ----------------------------------------------------------------------- | -------------------- |
+| `clipboardJsError` | The callback that will be fired when ClipboardJS fails to copy the text | `CustomEvent<Event>` |
+
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

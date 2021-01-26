@@ -60,6 +60,14 @@ declare namespace LocalJSX {
          */
         "language"?: string;
         /**
+          * The callback that will be fired when ClipboardJS fails to copy the text
+          * @remark You can use this to, for example, show notifications to users
+          * @remark This event will bubble up through the DOM
+          * @default undefined
+          * @example ```html <body> 	<syntax-highlighter id="example-highlight" theme="dark" language="typescript" content="console.log('example')" /> 	<script> 		const syntaxHighlighterElement = document.querySelector('#example-highlight'); 		syntaxHighlighterElement.addEventListener('clipboardJsError', event => { 			console.log('handling'); 		}); 	</script> </body> ```
+         */
+        "onClipboardJsError"?: (event: CustomEvent<ClipboardJS.Event>) => void;
+        /**
           * The theme to use, one of light or dark
           * @default dark
          */

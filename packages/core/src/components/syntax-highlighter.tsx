@@ -1,6 +1,6 @@
-import { Component, h, Host, Prop } from '@stencil/core';
+import { Component, ComponentInterface, ComponentWillLoad, Event, EventEmitter, h, Host, Prop } from '@stencil/core';
 import ClipboardJS from 'clipboard';
-import 'prismjs';
+import Prism from 'prismjs';
 import 'prismjs/components/prism-asciidoc.min.js';
 import 'prismjs/components/prism-autohotkey.min.js';
 import 'prismjs/components/prism-autoit.min.js';
@@ -58,34 +58,26 @@ import 'prismjs/components/prism-yaml.min.js';
 	tag: 'syntax-highlighter',
 	styleUrl: 'syntax-highlighter.css'
 })
-export class SyntaxHighlighter {
+export class SyntaxHighlighter implements ComponentWillLoad, ComponentInterface {
 	/**
 	 * The content to show in the syntax highlighter element
 	 */
-	@Prop()
-	content: string;
+	@Prop({ mutable: true, reflect: true })
+	public content: string;
 
 	/**
 	 * The theme to use, one of light or dark
 	 * @default dark
 	 */
-	@Prop()
-	theme: 'dark' | 'light' = 'dark';
+	@Prop({ mutable: true, reflect: true })
+	public theme: 'dark' | 'light' = 'dark';
 
 	/**
 	 * The language to highlight for
 	 * @default html
 	 */
-	@Prop()
-	language = 'html';
-
-	/**
-	 * The internal code parsed by PrismJS
-	 */
-	code: string;
-
-	/** The internal ref to the code block */
-	codeBlockRef: HTMLInputElement;
+	@Prop({ mutable: true, reflect: true })
+	public language = 'html';
 
 	/**
 	 * The text inside the "copy to clipboard" button
@@ -93,30 +85,51 @@ export class SyntaxHighlighter {
 	 * @example "Kopieer naar klembord"
 	 * @default "Copy to clipboard"
 	 */
-	@Prop()
-	copyButtonLabel = 'Copy to clipboard';
+	@Prop({ mutable: true, reflect: true })
+	public copyButtonLabel = 'Copy to clipboard';
 
-	componentDidLoad() {
-		Prism.hooks.add<{ code: string } & Record<PropertyKey, unknown>>('complete', env => {
-			this.code = env.code;
-		});
+	/**
+	 * The callback that will be fired when ClipboardJS fails to copy the text
+	 * @remark You can use this to, for example, show notifications to users
+	 * @remark This event will bubble up through the DOM
+	 * @default undefined
+	 * @example
+	 * ```html
+	 *	<body>
+	 *		<syntax-highlighter id="example-highlight" theme="dark" language="typescript" content="console.log('example')" />
+	 *		<script>
+	 *			const syntaxHighlighterElement = document.querySelector('#example-highlight');
+	 *			syntaxHighlighterElement.addEventListener('clipboardJsError', event => {
+	 *				console.log('handling');
+	 *			});
+	 *		</script>
+	 *	</body>
+	 * ```
+	 */
+	@Event({ bubbles: true })
+	public clipboardJsError: EventEmitter<ClipboardJS.Event>;
+
+	/** The internal ref to the code block */
+	private codeBlockRef: HTMLInputElement;
+
+	private clipboardJsInstance: ClipboardJS;
+
+	public componentWillLoad() {
+		this.clipboardJsInstance = new ClipboardJS('#syntaxhighlighter__ctc-button');
+		this.clipboardJsInstance //
+			.on('success', event => event.clearSelection()) //
+			.on('error', event => this.clipboardJsError.emit(event));
+	}
+
+	public componentDidRender() {
 		Prism.highlightAll();
-
-		new ClipboardJS('#syntaxhighlighter__ctc-button');
 	}
 
-	componentDidUpdate() {
+	public componentDidUpdate() {
 		Prism.highlightAll();
 	}
 
-	encodeContent(str?: string) {
-		if (!str) {
-			return undefined;
-		}
-		return Prism.util.encode(str);
-	}
-
-	render() {
+	public render() {
 		return (
 			<Host class="syntaxhighlighter" ref={() => this.codeBlockRef}>
 				{/* prevent anything from rendering that is between component selector */}
@@ -151,16 +164,11 @@ export class SyntaxHighlighter {
 			</Host>
 		);
 	}
-}
 
-declare global {
-	const Prism: {
-		hooks: {
-			add<CBT>(name: string, callback: (environment: CBT) => void): void;
-		};
-		highlightAll(): void;
-		util: {
-			encode(tokens: string): string;
-		};
-	};
+	private encodeContent(str?: string): string | undefined {
+		if (!str) {
+			return undefined;
+		}
+		return Prism.util.encode(str) as string;
+	}
 }

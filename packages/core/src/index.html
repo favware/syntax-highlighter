@@ -43,27 +43,19 @@
 			</div>
 			<main>
 				<div>
-					<h3 class="title">A simple ES6 import</h3>
-					<syntax-highlighter
-						theme="dark"
-						language="javascript"
-						content="import { SyntaxHighlighter } from @favware/syntax-highlighter-react"
-					/>
-				</div>
-
-				<div>
 					<h3 class="title">
 						Sample code from
 						<a target="__blank" rel="noreferrer" href="https://github.com/favware/graphql-pokemon">favware/graphql-pokemon</a>
 					</h3>
 					<syntax-highlighter
+						id="example-highlight"
 						theme="dark"
 						language="typescript"
 						content="
 import { Query } from '@favware/graphql-pokemon';
 
 interface GraphQLPokemonResponse<K extends keyof Omit<Query, '__typename'>> {
-  data: Record<K, Omit<Query[K], '__typename'>>;
+data: Record<K, Omit<Query[K], '__typename'>>;
 }
 
 fetch('https://graphqlpokemon.favware.tech/', {
@@ -73,14 +65,14 @@ fetch('https://graphqlpokemon.favware.tech/', {
 	},
 	body: JSON.stringify({
 		query: `
-		  {
+		{
 			getPokemonDetails(pokemon: dragonite skip: 0 take: 2 reverse: true) {
 				sprite
 				num
 				species
 				color
 			}
-		  }
+		}
 		`
 	})
 })
@@ -88,54 +80,14 @@ fetch('https://graphqlpokemon.favware.tech/', {
 	.then(json => console.log(json.data));"
 					/>
 				</div>
-
-				<div>
-					<h3 class="title">
-						Sample code from
-						<a target="__blank" rel="noreferrer" href="https://doc.rust-lang.org/rust-by-example/hello.html"
-							>Rust - Hello World</a
-						>
-					</h3>
-					<syntax-highlighter
-						theme="dark"
-						language="rust"
-						content='
-// This is a comment, and is ignored by the compiler
-
-// This is the main function
-fn main() {
-    // Statements here are executed when the compiled binary is called
-
-    // Print text to the console
-    println!("Hello World!");
-}'
-					/>
-				</div>
-
-				<div>
-					<h3 class="title">
-						A very light Hello World for C#
-					</h3>
-					<p>Note: C# language string is <em>csharp</em>, not <em>c#</em>!</p>
-					<syntax-highlighter
-						theme="light"
-						language="csharp"
-						content='
-using System;
-
-namespace HelloWorld
-{
-  class Program
-  {
-    static void Main(string[] args)
-    {
-      Console.WriteLine("Hello World!");    
-    }
-  }
-}'
-					/>
-				</div>
 			</main>
 		</div>
+		<script>
+			const syntaxHighlighterElement = document.querySelector('#example-highlight');
+			syntaxHighlighterElement.addEventListener('clipboardJsError', event => {
+				console.log('handling');
+				console.log(event);
+			});
+		</script>
 	</body>
 </html>
