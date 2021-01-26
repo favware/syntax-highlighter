@@ -20,10 +20,7 @@
 	"dependencies": {
 		"@stencil/core": "2.3.0",
 		"clipboard": "^2.0.6",
-		"prismjs": "^1.22.0"
-	},
-	"devDependencies": {
-		"@stencil/react-output-target": "^0.0.9"
+		"prismjs": "^1.23.0"
 	},
 	"directories": {
 		"lib": "src"
