@@ -1,52 +1,52 @@
 {
-	"name": "@favware/syntax-highlighter-react",
-	"version": "1.0.1",
-	"description": "React bindings for @favware/syntax-highlighter-core",
-	"author": "@favware",
-	"license": "MIT",
-	"main": "dist/index.js",
-	"module": "dist/index.es.js",
-	"typings": "dist/index.d.ts",
-	"homepage": "https://github.com/favware/syntax-highlighter/tree/main/packages/react#readme",
-	"scripts": {
-		"build": "rollup -c rollup.config.ts"
-	},
-	"peerDependencies": {
-		"@favware/syntax-highlighter-core": "latest",
-		"react": "^16.8.x || ^17.x",
-		"react-dom": "^16.8.x || ^17.x"
-	},
-	"directories": {
-		"lib": "src"
-	},
-	"files": [
-		"dist"
-	],
-	"engines": {
-		"node": ">=10"
-	},
-	"publishConfig": {
-		"access": "public"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/favware/syntax-highlighter.git"
-	},
-	"bugs": {
-		"url": "https://github.com/favware/syntax-highlighter/issues"
-	},
-	"keywords": [
-		"favware",
-		"typescript",
-		"ts",
-		"yarn",
-		"stenciljs",
-		"syntax",
-		"highlight",
-		"prism",
-		"primsjs",
-		"react",
-		"webcomponents",
-		"stencil"
-	]
+  "name": "@favware/syntax-highlighter-react",
+  "version": "1.0.1",
+  "description": "React bindings for @favware/syntax-highlighter-core",
+  "author": "@favware",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "typings": "dist/index.d.ts",
+  "homepage": "https://github.com/favware/syntax-highlighter/tree/main/packages/react#readme",
+  "scripts": {
+    "build": "rollup -c rollup.config.ts"
+  },
+  "peerDependencies": {
+    "@favware/syntax-highlighter-core": "latest",
+    "react": "^16.8.x || ^17.x",
+    "react-dom": "^16.8.x || ^17.x"
+  },
+  "directories": {
+    "lib": "src"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/favware/syntax-highlighter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/favware/syntax-highlighter/issues"
+  },
+  "keywords": [
+    "favware",
+    "typescript",
+    "ts",
+    "yarn",
+    "stenciljs",
+    "syntax",
+    "highlight",
+    "prism",
+    "primsjs",
+    "react",
+    "webcomponents",
+    "stencil"
+  ]
 }

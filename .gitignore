@@ -6,8 +6,6 @@ package-lock.json
 
 # IDE config
 .idea/
-.vscode/
-
 
 # Output
 dist/
@@ -22,6 +20,7 @@ loader/
 *.js.map
 *.jsx.map
 *.tgz
+!.prettierrc.js
 
 # Misc
 *~

@@ -25,13 +25,13 @@
 
 **_Table of Contents_**
 
--   [Why yet another code highlighter?](#why-yet-another-code-highlighter)
--   [Features](#features)
-    -   [Properties](#properties)
--   [Screenshots](#screenshots)
-    -   [Dark Theme](#dark-theme)
-    -   [Light Theme](#light-theme)
--   [Supported Languages](#supported-languages)
+- [Why yet another code highlighter?](#why-yet-another-code-highlighter)
+- [Features](#features)
+  - [Properties](#properties)
+- [Screenshots](#screenshots)
+  - [Dark Theme](#dark-theme)
+  - [Light Theme](#light-theme)
+- [Supported Languages](#supported-languages)
 
 # Why yet another code highlighter?
 
@@ -41,12 +41,12 @@
 
 # Features
 
--   Uses [PrismJS] for syntax highlighting
--   Light and Dark mode supported
--   Copy code support
--   Supports many languages, see [Supported Languages](#supported-languages)
--   Will default to using [Fira Code][] as font family
-    -   The library first falls back to popular fonts such as [Cascadia Code][] and [Meslo NGF][] if it isn't available. If these are also not available it will go through various more popular coding fonts, ending in `monospace`
+- Uses [PrismJS] for syntax highlighting
+- Light and Dark mode supported
+- Copy code support
+- Supports many languages, see [Supported Languages](#supported-languages)
+- Will default to using [Fira Code][] as font family
+  - The library first falls back to popular fonts such as [Cascadia Code][] and [Meslo NGF][] if it isn't available. If these are also not available it will go through various more popular coding fonts, ending in `monospace`
 
 # Supported Languages
 

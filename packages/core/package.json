@@ -1,58 +1,58 @@
 {
-	"name": "@favware/syntax-highlighter-core",
-	"version": "1.0.1",
-	"description": "A lightweight, easy-to-use and framework agnostic syntax highlighter for your code snippets.",
-	"author": "@favware",
-	"license": "MIT",
-	"main": "dist/index.cjs.js",
-	"module": "dist/index.js",
-	"es2015": "dist/esm/index.mjs",
-	"es2017": "dist/esm/index.mjs",
-	"types": "dist/types/index.d.ts",
-	"collection": "dist/collection/collection-manifest.json",
-	"collection:main": "dist/collection/index.js",
-	"unpkg": "dist/favware-syntax-highlighter-core/favware-syntax-highlighter-core.esm.js",
-	"homepage": "https://github.com/favware/syntax-highlighter/tree/main/packages/core#readme",
-	"scripts": {
-		"build": "stencil build --docs",
-		"serve": "stencil build --dev --watch --serve"
-	},
-	"dependencies": {
-		"@stencil/core": "2.3.0",
-		"clipboard": "^2.0.6",
-		"prismjs": "^1.23.0"
-	},
-	"directories": {
-		"lib": "src"
-	},
-	"files": [
-		"dist/",
-		"loader/"
-	],
-	"engines": {
-		"node": ">=10"
-	},
-	"publishConfig": {
-		"access": "public"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/favware/syntax-highlighter.git"
-	},
-	"bugs": {
-		"url": "https://github.com/favware/syntax-highlighter/issues"
-	},
-	"keywords": [
-		"favware",
-		"typescript",
-		"ts",
-		"yarn",
-		"stenciljs",
-		"syntax",
-		"highlight",
-		"prism",
-		"primsjs",
-		"webcomponents",
-		"stencil"
-	]
+  "name": "@favware/syntax-highlighter-core",
+  "version": "1.0.1",
+  "description": "A lightweight, easy-to-use and framework agnostic syntax highlighter for your code snippets.",
+  "author": "@favware",
+  "license": "MIT",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.js",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/favware-syntax-highlighter-core/favware-syntax-highlighter-core.esm.js",
+  "homepage": "https://github.com/favware/syntax-highlighter/tree/main/packages/core#readme",
+  "scripts": {
+    "build": "stencil build --docs",
+    "serve": "stencil build --dev --watch --serve"
+  },
+  "dependencies": {
+    "@stencil/core": "2.3.0",
+    "clipboard": "^2.0.6",
+    "prismjs": "^1.23.0"
+  },
+  "directories": {
+    "lib": "src"
+  },
+  "files": [
+    "dist/",
+    "loader/"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/favware/syntax-highlighter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/favware/syntax-highlighter/issues"
+  },
+  "keywords": [
+    "favware",
+    "typescript",
+    "ts",
+    "yarn",
+    "stenciljs",
+    "syntax",
+    "highlight",
+    "prism",
+    "primsjs",
+    "webcomponents",
+    "stencil"
+  ]
 }

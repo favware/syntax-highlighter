@@ -47,21 +47,21 @@
 
 **_Table of Contents_**
 
--   [Why yet another code highlighter?](#why-yet-another-code-highlighter)
--   [Features](#features)
--   [Installation](#installation)
-    -   [Install Package](#install-package)
-        -   [Framework Integration](#framework-integration)
-            -   [Angular](#angular)
-                -   [Including the Custom Element Schema](#including-the-custom-element-schema)
-                -   [Calling defineCustomElements](#calling-definecustomelements)
-                -   [Edge and IE11 polyfills](#edge-and-ie11-polyfills)
-                -   [Accessing components using ViewChild and ViewChildren](#accessing-components-using-viewchild-and-viewchildren)
-            -   [React](#react)
-            -   [Vue](#vue)
-            -   [No Framework](#no-framework)
-    -   [Usage](#usage)
--   [Supported Languages](#supported-languages)
+- [Why yet another code highlighter?](#why-yet-another-code-highlighter)
+- [Features](#features)
+- [Installation](#installation)
+  - [Install Package](#install-package)
+    - [Framework Integration](#framework-integration)
+      - [Angular](#angular)
+        - [Including the Custom Element Schema](#including-the-custom-element-schema)
+        - [Calling defineCustomElements](#calling-definecustomelements)
+        - [Edge and IE11 polyfills](#edge-and-ie11-polyfills)
+        - [Accessing components using ViewChild and ViewChildren](#accessing-components-using-viewchild-and-viewchildren)
+      - [React](#react)
+      - [Vue](#vue)
+      - [No Framework](#no-framework)
+  - [Usage](#usage)
+- [Supported Languages](#supported-languages)
 
 # Why yet another code highlighter?
 
@@ -71,12 +71,12 @@
 
 # Features
 
--   Uses [PrismJS] for syntax highlighting
--   Light and Dark mode supported
--   Copy code support
--   Supports many languages, see [Supported Languages](#supported-languages)
--   Will default to using [Fira Code][] as font family
-    -   The library first falls back to popular fonts such as [Cascadia Code][] and [Meslo NGF][] if it isn't available. If these are also not available it will go through various more popular coding fonts, ending in `monospace`
+- Uses [PrismJS] for syntax highlighting
+- Light and Dark mode supported
+- Copy code support
+- Supports many languages, see [Supported Languages](#supported-languages)
+- Will default to using [Fira Code][] as font family
+  - The library first falls back to popular fonts such as [Cascadia Code][] and [Meslo NGF][] if it isn't available. If these are also not available it will go through various more popular coding fonts, ending in `monospace`
 
 # Installation
 
@@ -103,11 +103,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 
 @NgModule({
-	declarations: [AppComponent],
-	imports: [BrowserModule],
-	providers: [],
-	bootstrap: [AppComponent],
-	schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  declarations: [AppComponent],
+  imports: [BrowserModule],
+  providers: [],
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule {}
 ```
@@ -126,12 +126,12 @@ import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
 
 if (environment.production) {
-	enableProdMode();
+  enableProdMode();
 }
 
 platformBrowserDynamic()
-	.bootstrapModule(AppModule)
-	.catch(err => console.error(err));
+  .bootstrapModule(AppModule)
+  .catch((err) => console.error(err));
 
 // Loading @favware/syntax-highlighter-core
 defineCustomElements();
@@ -145,7 +145,7 @@ If you want your custom elements to be able to work on older browsers, you shoul
 import { applyPolyfills, defineCustomElements } from '@favware/syntax-highlighter-core/loader';
 
 applyPolyfills().then(() => {
-	defineCustomElements();
+  defineCustomElements();
 });
 ```
 
@@ -159,17 +159,17 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 import '@favware/syntax-highlighter-core';
 
 @Component({
-	selector: 'app-root',
-	templateUrl: './app.component.html',
-	styleUrls: []
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: []
 })
 export class AppComponent {
-	@ViewChild('codeblock') syntaxCodeblock: ElementRef<HTMLSyntaxHighlighterElement>;
+  @ViewChild('codeblock') syntaxCodeblock: ElementRef<HTMLSyntaxHighlighterElement>;
 
-	async onAction() {
-		this.syntaxCodeblock.nativeElement.content = "import '@favware/syntax-highlighter-core';";
-		this.syntaxCodeblock.nativeElement.language = 'typescript';
-	}
+  async onAction() {
+    this.syntaxCodeblock.nativeElement.content = "import '@favware/syntax-highlighter-core';";
+    this.syntaxCodeblock.nativeElement.language = 'typescript';
+  }
 }
 ```
 
@@ -202,11 +202,11 @@ Vue.config.ignoredElements = [/syntax-highlighter\w*/];
 
 // Bind the custom elements to the window object
 applyPolyfills().then(() => {
-	defineCustomElements();
+  defineCustomElements();
 });
 
 new Vue({
-	render: h => h(App)
+  render: (h) => h(App)
 }).$mount('#app');
 ```
 
@@ -214,21 +214,21 @@ The components should then be available in any of the Vue templates
 
 ```html
 <template>
-	<syntax-highlighter
-		theme="dark"
-		language="javascript"
-		content="
+  <syntax-highlighter
+    theme="dark"
+    language="javascript"
+    content="
 <div id='app'>
   Hello World!
 </div>
     "
-	/>
+  />
 </template>
 
 <script>
-	export default {
-		name: 'App'
-	};
+  export default {
+    name: 'App'
+  };
 </script>
 ```
 

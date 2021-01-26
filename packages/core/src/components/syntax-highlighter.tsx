@@ -55,120 +55,116 @@ import 'prismjs/components/prism-wiki.min.js';
 import 'prismjs/components/prism-yaml.min.js';
 
 @Component({
-	tag: 'syntax-highlighter',
-	styleUrl: 'syntax-highlighter.css'
+  tag: 'syntax-highlighter',
+  styleUrl: 'syntax-highlighter.css'
 })
 export class SyntaxHighlighter implements ComponentWillLoad, ComponentInterface {
-	/**
-	 * The content to show in the syntax highlighter element
-	 */
-	@Prop({ mutable: true, reflect: true })
-	public content: string;
+  /**
+   * The content to show in the syntax highlighter element
+   */
+  @Prop({ mutable: true, reflect: true })
+  public content: string;
 
-	/**
-	 * The theme to use, one of light or dark
-	 * @default dark
-	 */
-	@Prop({ mutable: true, reflect: true })
-	public theme: 'dark' | 'light' = 'dark';
+  /**
+   * The theme to use, one of light or dark
+   * @default dark
+   */
+  @Prop({ mutable: true, reflect: true })
+  public theme: 'dark' | 'light' = 'dark';
 
-	/**
-	 * The language to highlight for
-	 * @default html
-	 */
-	@Prop({ mutable: true, reflect: true })
-	public language = 'html';
+  /**
+   * The language to highlight for
+   * @default html
+   */
+  @Prop({ mutable: true, reflect: true })
+  public language = 'html';
 
-	/**
-	 * The text inside the "copy to clipboard" button
-	 * @remark This is primarily for if you want to provide i18n with your syntax highlighted component
-	 * @example "Kopieer naar klembord"
-	 * @default "Copy to clipboard"
-	 */
-	@Prop({ mutable: true, reflect: true })
-	public copyButtonLabel = 'Copy to clipboard';
+  /**
+   * The text inside the "copy to clipboard" button
+   * @remark This is primarily for if you want to provide i18n with your syntax highlighted component
+   * @example "Kopieer naar klembord"
+   * @default "Copy to clipboard"
+   */
+  @Prop({ mutable: true, reflect: true })
+  public copyButtonLabel = 'Copy to clipboard';
 
-	/**
-	 * The callback that will be fired when ClipboardJS fails to copy the text
-	 * @remark You can use this to, for example, show notifications to users
-	 * @remark This event will bubble up through the DOM
-	 * @default undefined
-	 * @example
-	 * ```html
-	 *	<body>
-	 *		<syntax-highlighter id="example-highlight" theme="dark" language="typescript" content="console.log('example')" />
-	 *		<script>
-	 *			const syntaxHighlighterElement = document.querySelector('#example-highlight');
-	 *			syntaxHighlighterElement.addEventListener('clipboardJsError', event => {
-	 *				console.log('handling');
-	 *			});
-	 *		</script>
-	 *	</body>
-	 * ```
-	 */
-	@Event({ bubbles: true })
-	public clipboardJsError: EventEmitter<ClipboardJS.Event>;
+  /**
+   * The callback that will be fired when ClipboardJS fails to copy the text
+   * @remark You can use this to, for example, show notifications to users
+   * @remark This event will bubble up through the DOM
+   * @default undefined
+   * @example
+   * ```html
+   *	<body>
+   *		<syntax-highlighter id="example-highlight" theme="dark" language="typescript" content="console.log('example')" />
+   *		<script>
+   *			const syntaxHighlighterElement = document.querySelector('#example-highlight');
+   *			syntaxHighlighterElement.addEventListener('clipboardJsError', event => {
+   *				console.log('handling');
+   *			});
+   *		</script>
+   *	</body>
+   * ```
+   */
+  @Event({ bubbles: true })
+  public clipboardJsError: EventEmitter<ClipboardJS.Event>;
 
-	/** The internal ref to the code block */
-	private codeBlockRef: HTMLInputElement;
+  /** The internal ref to the code block */
+  private codeBlockRef: HTMLInputElement;
 
-	private clipboardJsInstance: ClipboardJS;
+  private clipboardJsInstance: ClipboardJS;
 
-	public componentWillLoad() {
-		this.clipboardJsInstance = new ClipboardJS('#syntaxhighlighter__ctc-button');
-		this.clipboardJsInstance //
-			.on('success', event => event.clearSelection()) //
-			.on('error', event => this.clipboardJsError.emit(event));
-	}
+  public componentWillLoad() {
+    this.clipboardJsInstance = new ClipboardJS('#syntaxhighlighter__ctc-button');
+    this.clipboardJsInstance //
+      .on('success', (event) => event.clearSelection()) //
+      .on('error', (event) => this.clipboardJsError.emit(event));
+  }
 
-	public componentDidRender() {
-		Prism.highlightAll();
-	}
+  public componentDidRender() {
+    Prism.highlightAll();
+  }
 
-	public componentDidUpdate() {
-		Prism.highlightAll();
-	}
+  public componentDidUpdate() {
+    Prism.highlightAll();
+  }
 
-	public render() {
-		return (
-			<Host class="syntaxhighlighter" ref={() => this.codeBlockRef}>
-				{/* prevent anything from rendering that is between component selector */}
-				<div class="syntaxhighlighter__hidden">
-					<slot />
-				</div>
-				<div class={this.theme}>
-					<div class="syntaxhighlighter__code-toolbar">
-						<pre class={`language-${this.language}`}>
-							<code
-								id="syntaxhighlighter__ctc-target"
-								class={`language-${this.language}`}
-								innerHTML={this.encodeContent(this.content)}
-							/>
-						</pre>
-						<div class="syntaxhighlighter__toolbar">
-							<div class="syntaxhighlighter__toolbar-item">
-								<span class="syntaxhighlighter__language-label">{this.language.toUpperCase()}</span>
-							</div>
-							<div class="syntaxhighlighter__toolbar-item">
-								<button
-									id="syntaxhighlighter__ctc-button"
-									class="syntaxhighlighter__copy-button"
-									data-clipboard-target="#syntaxhighlighter__ctc-target"
-								>
-									{this.copyButtonLabel}
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</Host>
-		);
-	}
+  public render() {
+    return (
+      <Host class="syntaxhighlighter" ref={() => this.codeBlockRef}>
+        {/* prevent anything from rendering that is between component selector */}
+        <div class="syntaxhighlighter__hidden">
+          <slot />
+        </div>
+        <div class={this.theme}>
+          <div class="syntaxhighlighter__code-toolbar">
+            <pre class={`language-${this.language}`}>
+              <code id="syntaxhighlighter__ctc-target" class={`language-${this.language}`} innerHTML={this.encodeContent(this.content)} />
+            </pre>
+            <div class="syntaxhighlighter__toolbar">
+              <div class="syntaxhighlighter__toolbar-item">
+                <span class="syntaxhighlighter__language-label">{this.language.toUpperCase()}</span>
+              </div>
+              <div class="syntaxhighlighter__toolbar-item">
+                <button
+                  id="syntaxhighlighter__ctc-button"
+                  class="syntaxhighlighter__copy-button"
+                  data-clipboard-target="#syntaxhighlighter__ctc-target"
+                >
+                  {this.copyButtonLabel}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Host>
+    );
+  }
 
-	private encodeContent(str?: string): string | undefined {
-		if (!str) {
-			return undefined;
-		}
-		return Prism.util.encode(str) as string;
-	}
+  private encodeContent(str?: string): string | undefined {
+    if (!str) {
+      return undefined;
+    }
+    return Prism.util.encode(str) as string;
+  }
 }
