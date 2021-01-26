@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/favware/syntax-highlighter/compare/v1.0.1...v1.1.0) (2021-01-26)
+
+### Features
+
+- expose clipboardJsError event & fix for latest StencilJS and PrismJS ([3c8cf80](https://github.com/favware/syntax-highlighter/commit/3c8cf8004abc8d07e55d66e6be1daa11303ffad9))
+
 ## [1.0.1](https://github.com/favware/syntax-highlighter/compare/v1.0.0...v1.0.1) (2020-08-06)
 
 **Note:** Version bump only for package @favware/syntax-highlighter-react
