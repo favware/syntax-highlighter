@@ -19,6 +19,10 @@
 
 - [Why yet another code highlighter?](#why-yet-another-code-highlighter)
 - [Features](#features)
+- [Demos](#demos)
+  - [Angular](#angular)
+  - [React](#react)
+  - [Vue](#vue)
 - [Supported Languages](#supported-languages)
 - [Screenshots](#screenshots)
   - [Dark Mode](#dark-mode)
@@ -38,6 +42,20 @@
 - Supports many languages, see [Supported Languages](#supported-languages)
 - Will default to using [Fira Code][] as font family
   - The library first falls back to popular fonts such as [Cascadia Code][] and [Meslo NGF][] if it isn't available. If these are also not available it will go through various more popular coding fonts, ending in `monospace`
+
+## Demos
+
+### Angular
+
+[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/syntax-highlighter-angular-0qb8k)
+
+### React
+
+[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/syntax-highlighter-react-bb90c)
+
+### Vue
+
+[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/syntax-highlighter-vue-z815p)
 
 ## Supported Languages
 
