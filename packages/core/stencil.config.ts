@@ -3,11 +3,14 @@ import { reactOutputTarget } from '@stencil/react-output-target';
 
 export const config: Config = {
 	namespace: 'favware-syntax-highlighter-core',
+	taskQueue: 'async',
 	buildEs5: false,
 	outputTargets: [
 		reactOutputTarget({
 			componentCorePackage: '@favware/syntax-highlighter-core',
-			proxiesFile: '../react/src/index.ts'
+			proxiesFile: '../react/src/index.ts',
+			includeDefineCustomElements: true,
+			includePolyfills: false
 		}),
 		{
 			type: 'dist',
