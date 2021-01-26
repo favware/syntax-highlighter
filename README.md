@@ -7,8 +7,8 @@
 **A lightweight, easy-to-use and framework agnostic syntax highlighter for your code examples(snippets) in web applications**
 
 [![GitHub](https://img.shields.io/github/license/favware/syntax-highlighter)](https://github.com/favware/syntax-highlighter/blob/main/LICENSE.md)
-[![npm](https://img.shields.io/npm/v/@favware/syntax-highlighter-core?color=crimson&label=@favware/syntax-highlighter-core&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/syntax-highlighter-core)
-[![npm](https://img.shields.io/npm/v/@favware/syntax-highlighter-react?color=crimson&label=@favware/syntax-highlighter-react&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/syntax-highlighter-react)
+[![npm](https://img.shields.io/npm/v/@favware/syntax-highlighter-core?color=crimson&label=@favware/syntax-highlighter-core&logo=npm)](https://www.npmjs.com/package/@favware/syntax-highlighter-core)
+[![npm](https://img.shields.io/npm/v/@favware/syntax-highlighter-react?color=crimson&label=@favware/syntax-highlighter-react&logo=npm)](https://www.npmjs.com/package/@favware/syntax-highlighter-react)
 [![Depfu](https://badges.depfu.com/badges/efe23d577642dc26c6636c1630e5cccf/count.svg)](https://depfu.com/github/favware/syntax-highlighter?project_id=21396)
 
 </div>
