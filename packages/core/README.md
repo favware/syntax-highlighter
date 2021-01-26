@@ -65,9 +65,9 @@
 
 # Why yet another code highlighter?
 
-> There are many syntax highlighters avaliable already but most of those are either complex to setup or front end framework specific. `@favware/syntax-highlighter-core` is built using StencilJS. You can use it everywhere, i.e. Angular, React, Vue, any framework, No Framework!
+> There are many syntax highlighters available already but most of those are either complex to setup or front end framework specific. `@favware/syntax-highlighter-core` is built using StencilJS. You can use it everywhere, i.e. Angular, React, Vue, any framework, No Framework!
 >
-> **This is an adoptation of [snippet-highlight] from [rahulbhooteshwar]**
+> **This is an adaptation of [snippet-highlight] from [rahulbhooteshwar]**
 
 # Features
 
@@ -75,8 +75,8 @@
 -   Light and Dark mode supported
 -   Copy code support
 -   Supports many languages, see [Supported Languages](#supported-languages)
--   Will default to using [Fira Code] as font family
-    -   The library first falls back to popular fonts such as [Cascadia Code] and [Meslo NGF] if it isn't available. If these are also not available it will go through various more popular coding fonts, ending in `monospace`
+-   Will default to using [Fira Code][] as font family
+    -   The library first falls back to popular fonts such as [Cascadia Code][] and [Meslo NGF][] if it isn't available. If these are also not available it will go through various more popular coding fonts, ending in `monospace`
 
 # Installation
 
@@ -89,7 +89,9 @@ yarn add @favware/syntax-highlighter-core
 
 ### Framework Integration
 
-#### Angular - [Sample on CodeSanbox](https://codesandbox.io/s/syntax-highlighter-angular-0qb8k)
+#### Angular
+
+[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/syntax-highlighter-angular-0qb8k)
 
 ##### Including the Custom Element Schema
 
@@ -177,11 +179,15 @@ export class AppComponent {
 <syntax-highlighter #codeblock theme="dark" language="typescript" content="import '@favware/syntax-highlighter-core';"></syntax-highlighter>
 ```
 
-#### React - [Sample on CodeSanbox](https://codesandbox.io/s/syntax-highlighter-react-bb90c)
+#### React
+
+[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/syntax-highlighter-react-bb90c)
 
 See [@favware/syntax-highlighter-react]
 
-#### Vue - [Sample on CodeSanbox](https://codesandbox.io/s/syntax-highlighter-vue-z815p)
+#### Vue
+
+[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/syntax-highlighter-vue-z815p)
 
 In order to use the custom element library within the Vue app, the application must be modified to define the custom elements and to inform the Vue compiler which elements to ignore during compilation. This can all be done within the `main.js` file. For example:
 

@@ -65,8 +65,8 @@
 -   Light and Dark mode supported
 -   Copy code support
 -   Supports many languages, see [Supported Languages](#supported-languages)
--   Will default to using [Fira Code] as font family
-    -   The library first falls back to popular fonts such as [Cascadia Code] and [Meslo NGF] if it isn't available. If these are also not available it will go through various more popular coding fonts, ending in `monospace`
+-   Will default to using [Fira Code][] as font family
+    -   The library first falls back to popular fonts such as [Cascadia Code][] and [Meslo NGF][] if it isn't available. If these are also not available it will go through various more popular coding fonts, ending in `monospace`
 
 # Installation
 
@@ -77,7 +77,7 @@ yarn add @favware/syntax-highlighter-core @favware/syntax-highlighter-react
 
 ## Usage
 
-[Sample on CodeSanbox](https://codesandbox.io/s/syntax-highlighter-react-bb90c)
+[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/syntax-highlighter-react-bb90c)
 
 The syntax is kept fairly simple. Here's a basic example of some simple JavaScript code:
 

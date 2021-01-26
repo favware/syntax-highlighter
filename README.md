@@ -35,9 +35,9 @@
 
 # Why yet another code highlighter?
 
-> There are many syntax highlighters avaliable already but most of those are either complex to setup or front end framework specific. `@favware/syntax-highlighter-core` is built using StencilJS. You can use it everywhere, i.e. Angular, React, Vue, any framework, No Framework!
+> There are many syntax highlighters available already but most of those are either complex to setup or front end framework specific. `@favware/syntax-highlighter-core` is built using StencilJS. You can use it everywhere, i.e. Angular, React, Vue, any framework, No Framework!
 >
-> **This is an adoptation of [snippet-highlight] from [rahulbhooteshwar]**
+> **This is an adaptation of [snippet-highlight] from [rahulbhooteshwar]**
 
 # Features
 
@@ -45,8 +45,8 @@
 -   Light and Dark mode supported
 -   Copy code support
 -   Supports many languages, see [Supported Languages](#supported-languages)
--   Will default to using [Fira Code] as font family
-    -   The library first falls back to popular fonts such as [Cascadia Code] and [Meslo NGF] if it isn't available. If these are also not available it will go through various more popular coding fonts, ending in `monospace`
+-   Will default to using [Fira Code][] as font family
+    -   The library first falls back to popular fonts such as [Cascadia Code][] and [Meslo NGF][] if it isn't available. If these are also not available it will go through various more popular coding fonts, ending in `monospace`
 
 # Supported Languages
 
