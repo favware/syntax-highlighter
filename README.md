@@ -1,45 +1,36 @@
 <div align="center">
 
-<p>
 <a href="https://favware.tech/syntaxhighlighter"><img style="height: 200px" src="https://cdn.favware.tech/img/syntax-highlighter.png" height="200" alt="logo"/></a>
-</p>
 
-<p>
-<h1> Syntax Highlighter </h1>
-<h3> A lightweight, easy-to-use and framework agnostic syntax highlighter for your code examples(snippets) in web applications </h3>
-</p>
-<p>
-	<a href="https://github.com/favware/syntax-highlighter/blob/main/LICENSE.md">
-	<img src="https://img.shields.io/github/license/favware/syntax-highlighter?logo=github&maxAge=3600&style=flat-square" alt="NPM version" />
-	</a>
-</p>
+# Syntax Highlighter
 
-<a href="https://depfu.com/github/favware/syntax-highlighter?project_id=13651">
-<img src="https://badges.depfu.com/badges/4853d088999fc77ee0f8377b3fb52d9a/count.svg" alt="Depfu" />
-</a>
+**A lightweight, easy-to-use and framework agnostic syntax highlighter for your code examples(snippets) in web applications**
 
-<a href="https://donate.favware.tech/patreon">
-<img src="https://img.shields.io/badge/donate-patreon-F96854.svg?logo=patreon" alt="Patreon" />
-</a>
+[![GitHub](https://img.shields.io/github/license/favware/syntax-highlighter)](https://github.com/favware/syntax-highlighter/blob/main/LICENSE.md)
+[![npm](https://img.shields.io/npm/v/@favware/syntax-highlighter-core?color=crimson&label=@favware/syntax-highlighter-core&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/syntax-highlighter-core)
+[![npm](https://img.shields.io/npm/v/@favware/syntax-highlighter-react?color=crimson&label=@favware/syntax-highlighter-react&logo=npm&style=flat-square)](https://www.npmjs.com/package/@favware/syntax-highlighter-react)
+[![Depfu](https://badges.depfu.com/badges/efe23d577642dc26c6636c1630e5cccf/count.svg)](https://depfu.com/github/favware/syntax-highlighter?project_id=21396)
+
 </div>
+
+---
 
 **_Table of Contents_**
 
 - [Why yet another code highlighter?](#why-yet-another-code-highlighter)
 - [Features](#features)
-  - [Properties](#properties)
-- [Screenshots](#screenshots)
-  - [Dark Theme](#dark-theme)
-  - [Light Theme](#light-theme)
 - [Supported Languages](#supported-languages)
+- [Screenshots](#screenshots)
+  - [Dark Mode](#dark-mode)
+  - [Light Mode](#light-mode)
 
-# Why yet another code highlighter?
+## Why yet another code highlighter?
 
 > There are many syntax highlighters available already but most of those are either complex to setup or front end framework specific. `@favware/syntax-highlighter-core` is built using StencilJS. You can use it everywhere, i.e. Angular, React, Vue, any framework, No Framework!
 >
 > **This is an adaptation of [snippet-highlight] from [rahulbhooteshwar]**
 
-# Features
+## Features
 
 - Uses [PrismJS] for syntax highlighting
 - Light and Dark mode supported
@@ -48,7 +39,7 @@
 - Will default to using [Fira Code][] as font family
   - The library first falls back to popular fonts such as [Cascadia Code][] and [Meslo NGF][] if it isn't available. If these are also not available it will go through various more popular coding fonts, ending in `monospace`
 
-# Supported Languages
+## Supported Languages
 
 To limit the size of this library a selection has been made from all langauges supported by PrismJS. The chosen languages are those that we consider the most popular / common. If you want to see another languages supported you're always free to open [an issue]
 
@@ -63,6 +54,16 @@ To limit the size of this library a selection has been made from all langauges s
 `nginx`, `objectivec`, `powershell`, `python`, `ruby`, `rust`, `sass`, `scala`,  
 &nbsp;  
 `scss`, `sql`, `swift`, `tsx`, `vim`, `visual-basic`, `wasm`, `wiki`, `yaml`
+
+## Screenshots
+
+### Dark Mode
+
+![](https://raw.githubusercontent.com/favware/syntax-highlighter/main/assets/dark_mode.png)
+
+### Light Mode
+
+![](https://raw.githubusercontent.com/favware/syntax-highlighter/main/assets/light_mode.png)
 
 <!-- LINK DUMP -->
 
